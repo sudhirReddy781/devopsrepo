@@ -9,6 +9,8 @@ public class Numbers {
             System.out.println("Add: " + (num1 + num2));
         } else if ("-".equals(operator)) {
             System.out.println("Substract: " + (num1 - num2));
+        } else if ("*".equals(operator)) {
+            System.out.println("Multiply: " + (num1 * num2));
         } else {
             System.out.println("**Enter valid operator**");
         }
