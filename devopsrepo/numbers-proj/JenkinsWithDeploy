@@ -3,18 +3,18 @@ pipeline {
 
     tools {
         maven "Maven"
-        jdk "openjdk-14"
+        jdk "JDK17"
     }
 
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean compile package -f ./devopsrepo/numbers-proj/pom.xml'
+                bat 'mvn clean compile package -f ./devopsrepo/numbers-proj/pom.xml'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test -f ./devopsrepo/numbers-proj/pom.xml'
+                bat 'mvn test -f ./devopsrepo/numbers-proj/pom.xml'
             }
             post {
                 always {
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'mvn deploy -f ./devopsrepo/numbers-proj/pom.xml'
+                bat 'mvn deploy -f ./devopsrepo/numbers-proj/pom.xml'
             }
         }
     }
