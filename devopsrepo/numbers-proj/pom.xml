@@ -8,7 +8,7 @@
     <maven.compiler.source>14</maven.compiler.source>
     <maven.compiler.target>14</maven.compiler.target>
   </properties>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.2-SNAPSHOT</version>
   <name>myproject</name>
   <url>http://maven.apache.org</url>
   <dependencies>
